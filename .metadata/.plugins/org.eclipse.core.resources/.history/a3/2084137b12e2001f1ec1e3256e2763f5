@@ -1,0 +1,15 @@
+public class Exercice1 implements It1 {
+	public int apply(int t) {
+		return t+1;
+	}
+
+public class Exercice1b implements It2 {
+	public int apply(int t) {
+		return t+1;
+	}	
+	
+public static void main(String[] args) {
+	Exercice1 ex1a=new Exercice1();
+	System.out.println(ex1a.apply(3));
+}
+}

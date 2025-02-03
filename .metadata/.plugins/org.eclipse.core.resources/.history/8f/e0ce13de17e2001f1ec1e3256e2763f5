@@ -1,0 +1,6 @@
+import java.util.function.Function;
+
+@FunctionalInterface
+public interface It3 <T,R,A>{
+	public A apply(Function<T,R> f, A a);
+}

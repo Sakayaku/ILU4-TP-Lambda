@@ -1,0 +1,4 @@
+
+public interface IEx1 <T>{
+	void apply(T t);
+}

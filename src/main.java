@@ -1,0 +1,10 @@
+public class main {
+	public static void main(String[] args) {
+		Exercice1a ex1a=new Exercice1a();
+		System.out.println(ex1a.apply(3));
+		Exercice1b ex1b=new Exercice1b();
+		System.out.println(ex1b.apply(ex1a));
+		
+		
+	}
+}

@@ -1,0 +1,7 @@
+
+public class Exercice1b {
+	public class Exercice1b implements It2<Exercice1> {
+		public int apply(Exercice1 t1) {
+			return t1.apply();
+		}	
+}

@@ -1,0 +1,4 @@
+
+public class Exercice1c{
+	public static void <A> apply (It3<A> f, A a)
+}
