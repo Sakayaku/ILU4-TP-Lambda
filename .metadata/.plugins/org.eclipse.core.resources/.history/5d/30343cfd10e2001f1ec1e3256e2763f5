@@ -1,7 +1,0 @@
-public class Exercice1 implements IEx1 {
-	public int apply(int t) {
-		return t+1;
-	}
-}
-
-

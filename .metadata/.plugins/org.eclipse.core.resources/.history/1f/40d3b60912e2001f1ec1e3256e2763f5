@@ -1,4 +1,0 @@
-@FunctionalInterface
-public interface IEx1{
-	int apply(int t);
-}

@@ -1,6 +1,0 @@
-
-public class Exercice1c implements It3 {
-	public It3 apply() {
-		
-	}
-}

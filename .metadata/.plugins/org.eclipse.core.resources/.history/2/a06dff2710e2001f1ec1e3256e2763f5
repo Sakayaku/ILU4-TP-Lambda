@@ -1,7 +1,0 @@
-
-public class Exercice1 <T> implements IEx1<T> {
-	public int add(T t) {
-		return t+1;
-	}
-	
-}

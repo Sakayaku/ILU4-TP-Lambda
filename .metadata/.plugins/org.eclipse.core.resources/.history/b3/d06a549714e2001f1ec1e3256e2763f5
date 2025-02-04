@@ -1,5 +1,0 @@
-public class Exercice1b implements It2<Exercice1a> {
-	public int apply(Exercice1a t1) {
-		return this.apply(t1);
-	}	
-}
