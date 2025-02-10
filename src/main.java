@@ -22,9 +22,11 @@ public class main {
 		System.out.println(inc1.apply(3));
 		Exercice1b ex1b=new Exercice1b();
 		System.out.println(ex1b.apply(inc1));
-		It3<String> ex1c = new It3<>() {
-			public String apply(Function <String, String> f, String s) {
-				return f.apply(f.apply(s));
+		It3 ex1c = new It3() {
+
+			@Override
+			public <T> T apply(Function<T,T> f, T s) {
+				return  f.apply(f.apply(s));
 			}
 		};
 		
@@ -53,15 +55,25 @@ public class main {
 		IComp2<String,Integer,Integer,Integer> comp2siii=comp2();
 		System.out.println(comp2siii.apply(f3, f4, p, "2"));
 		
-		System.out.println("On est ├а l'exercice 3");
-		List<Integer> liste=Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+		System.out.println("On est ра l'exercice 3");
+		List<Integer> liste=Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,11,11);
 		List<Integer> liste2 = Flist.map(liste, elementListe->elementListe+2);
 		Flist.for_all(liste2, elementListe -> System.out.println(elementListe));
 		List<Integer> liste3=Flist.filter(liste2, elementListe -> elementListe%2==0);
 		Flist.for_all(liste3, elementListe -> System.out.println(elementListe));
 		System.out.println(Flist.exists(liste2, elementListe -> elementListe==4));
 		
-		System.out.println(FIter.map(liste, elementListe -> elementListe+2));
-		System.out.println(FIter.filter(liste, elementListe -> elementListe%2==0));
+		System.out.println("Iterable map ");
+		for (Integer i:
+				FIter.map(liste, elementListe -> elementListe+2)) {
+			System.out.println(i);
+		}
+		System.out.println("Iterable filter ");
+		for (Integer i:
+			FIter.filter(liste, elementListe -> elementListe%2==0)) {
+		System.out.println(i);
+		}
+		System.out.println("Fin");
 	}
 }
+
