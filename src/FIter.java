@@ -8,9 +8,9 @@ public class FIter {
 	public static <A,B> Iterable<B> map(Iterable<A> i, Function<A,B> f) {
 		//'a list -> ('a -> 'b) -> 'b list
 		Iterator<A> it = i.iterator();
-		return new Iterable<B>() {
+		return new Iterable<B>() { //on retourne un nouvel Iterable
 			@Override
-			public Iterator<B> iterator() {
+			public Iterator<B> iterator() { //dans lequel on redéfinit iterator
 				return new Iterator<B>() {
 					@Override
 					public boolean hasNext() {
@@ -28,26 +28,25 @@ public class FIter {
 	public static <A> Iterable<A> filter(Iterable<A> i, Predicate<A> b){
 		Iterator<A> it = i.iterator();
 		return new Iterable<A>() {
+			//A actuel;
 			@Override
 			public Iterator<A> iterator() {
 				return new Iterator<A>() {
+					A actuel;
 					@Override
 					public boolean hasNext() {
-						return it.hasNext();
+						while (it.hasNext()) {
+							actuel=it.next();
+							if (b.test(actuel)) {
+								return true;
+							}
+						}
+						return false;
+						
 					}
 					@Override
 					public A next() {
-						A actuel=it.next();
-						if (b.test(actuel)) {
-							return (actuel);
-						}else {
-							while (!b.test(actuel)){ // a mettre dans hasNext
-								if (it.hasNext()) {
-									actuel=it.next();
-								}
-							}
-							return actuel;
-						}
+						return actuel;
 					}
 				};
 			}

@@ -55,7 +55,7 @@ public class main {
 		IComp2<String,Integer,Integer,Integer> comp2siii=comp2();
 		System.out.println(comp2siii.apply(f3, f4, p, "2"));
 		
-		System.out.println("On est à  l'exercice 3");
+		System.out.println("On est ï¿½ l'exercice 3");
 		List<Integer> liste=Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,11,11);
 		List<Integer> liste2 = Flist.map(liste, elementListe->elementListe+2);
 		Flist.for_all(liste2, elementListe -> System.out.println(elementListe));
